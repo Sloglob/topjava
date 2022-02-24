@@ -29,6 +29,13 @@ public class InMemoryMealRepository implements MealRepository {
         MealsUtil.meals.forEach(meal -> save(meal, USER_ID));
         save(new Meal(LocalDateTime.of(2015, Month.JUNE, 1, 14, 0), "Админ ланч", 510), ADMIN_ID);
         save(new Meal(LocalDateTime.of(2015, Month.JUNE, 1, 21, 0), "Админ ужин", 1500), ADMIN_ID);
+
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 31, 8, 0), "Завтрак", 400), USER_ID);
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 31, 12, 0), "Обед", 1000), USER_ID);
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 31, 21, 0), "Ужин", 500), USER_ID);
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 30, 9, 0), "Завтрак", 500), USER_ID);
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 30, 13, 0), "Обед", 1100), USER_ID);
+        save(new Meal(LocalDateTime.of(2022, Month.JANUARY, 30, 20, 0), "Ужин", 450), USER_ID);
     }
 
 

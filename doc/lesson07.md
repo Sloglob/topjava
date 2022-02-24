@@ -281,11 +281,16 @@ JUnit предоставляет нам набор коллбэков — инт
 через геттеры (например в ответе есть поле `new` от метода `Persistable.isNew()`).
 Чтобы учитывались только поля объектов, добавим над `AbstractBaseEntity`:  
 ````java
-@JsonAutoDetect(fieldVisibility = ANY, // jackson видит все поля
-        getterVisibility = NONE, // ... но не видит геттеров
-        isGetterVisibility = NONE, //... не видит геттеров boolean полей
-        setterVisibility = NONE) // ... не видит сеттеров
-````
+
+[comment]: <> (@JsonAutoDetect&#40;fieldVisibility = ANY, // jackson видит все поля)
+
+[comment]: <> (        getterVisibility = NONE, // ... но не видит геттеров)
+
+[comment]: <> (        isGetterVisibility = NONE, //... не видит геттеров boolean полей)
+
+[comment]: <> (        setterVisibility = NONE&#41; // ... не видит сеттеров)
+
+[comment]: <> (````)
 Теперь все сущности, унаследованные от базового класса, будут сериализоваться/десериализоваться через поля. 
 
 </details>
